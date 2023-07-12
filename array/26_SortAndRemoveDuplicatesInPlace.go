@@ -1,19 +1,10 @@
-package main
+package array
 
-import (
-	"fmt"
-	"math/rand"
-	// "time"
-)
-
-func generateRandomSlise(size int) []int {
-	slise := make([]int, size)
-	// rand.Seed(time.Now().UnixNano())
-	fmt.Print()
-	for i := range slise {
-		slise[i] = rand.Intn(10)
-	}
-	return slise
+func SortAndRemoveDuplicatesInPlace() {
+	var size int = 100
+	nums := generateRandomSlise(size)
+	removeDuplicates(nums)
+	printSlise(nums)
 }
 
 func removeDuplicates(nums []int) int {
@@ -23,13 +14,13 @@ func removeDuplicates(nums []int) int {
 			break
 		}
 
-        //making sort
-        var iterator int  = i 
-		for iterator > 0 && nums[iterator] < nums[iterator-1]  { 
+		//making sort
+		var iterator int = i
+		for iterator > 0 && nums[iterator] < nums[iterator-1] {
 			nums[iterator], nums[iterator-1] = nums[iterator-1], nums[iterator]
 			iterator--
 		}
-    
+
 		// making Garbage
 		for j := i + 1; j < garbageCursor; j++ {
 			// если в garbageCursor элемент равный повторяющемуся
@@ -48,21 +39,4 @@ func removeDuplicates(nums []int) int {
 	}
 
 	return garbageCursor
-}
-
-func printSlise(slise []int) {
-	for i, v := range slise {
-		if i%10 == 0 && i != 0 {
-			fmt.Println()
-		}
-		fmt.Printf("%d : ", v)
-	}
-	println()
-}
-
-func main() {
-	var size int = 100
-	nums := generateRandomSlise(size)
-	removeDuplicates(nums)
-	printSlise(nums)
 }
