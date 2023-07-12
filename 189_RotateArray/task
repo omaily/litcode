@@ -1,0 +1,26 @@
+func RotateArray() {
+	var size int = 20
+	nums := generateRandomSlise(size)
+    printSlise(nums)
+	rotate(nums, 4)
+    println()
+	printSlise(nums)
+}
+
+func rotate(nums []int, k int)  {
+    length := len(nums)
+    if length <= 0 && k <= 0 {
+        return 
+    }
+    numsCopy := make([]int, length) 
+    copy(numsCopy, nums)
+
+    
+    for i := range nums {
+       nums[(i + k)%length] = numsCopy[i]
+    }
+}
+
+func rotateInPlase(nums []int, k int)  {
+
+}
