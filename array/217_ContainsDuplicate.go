@@ -11,7 +11,7 @@ func containsDuplicate(nums []int) bool {
 	for i := range nums {
 		for j := i + 1; j < len(nums); j++ {
 			if nums[i] == nums[j] {
-
+				print(nums[j], "--")
 				return true
 			}
 		}
