@@ -1,6 +1,6 @@
 package array
 
-func BestTimetoBuyAndSell() {
+func task_122() {
 	var size int = 10
 	nums := generateRandomSlise(size)
 	maxProfit(nums)

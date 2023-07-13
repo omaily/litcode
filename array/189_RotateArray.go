@@ -1,6 +1,6 @@
 package array
 
-func RotateArray() {
+func task_189() {
 	var size int = 20
 	nums := generateRandomSlise(size)
 	printSlise(nums)
@@ -31,7 +31,7 @@ func rotateInPlase(nums []int, k int) {
 
 	for i := 0; i < k; i++ {
 		lastValue := nums[length-1]
-		for j := 1; j < length-1; j++ {
+		for j := length - 1; j > 0; j-- {
 			nums[j] = nums[j-1]
 		}
 		nums[0] = lastValue

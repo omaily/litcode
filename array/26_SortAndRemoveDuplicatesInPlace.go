@@ -1,6 +1,6 @@
 package array
 
-func SortAndRemoveDuplicatesInPlace() {
+func task_26() {
 	var size int = 100
 	nums := generateRandomSlise(size)
 	removeDuplicates(nums)
