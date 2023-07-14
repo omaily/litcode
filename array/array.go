@@ -11,7 +11,7 @@ func generateRandomSlise(size int) []int {
 	// rand.Seed(time.Now().UnixNano())
 	fmt.Print()
 	for i := range slise {
-		slise[i] = rand.Intn(9) + 1
+		slise[i] = rand.Intn(10)
 	}
 	return slise
 }
@@ -53,5 +53,6 @@ func StartTask() {
 	// task_217()
 	// task_136()
 	// task_350()
-	task_66()
+	// task_66()
+	task_283()
 }
