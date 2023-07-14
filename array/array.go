@@ -26,10 +26,32 @@ func printSlise(slise []int) {
 	println()
 }
 
+func linearSearchContains(slise []int, elem int) bool {
+	for i := range slise {
+		if elem == slise[i] {
+			return true
+		}
+	}
+	return false
+}
+
+// возвращает первый индекс первого встреченного элемента
+// если элемент не найден вернет отрицательное значение (заменяет Contains)
+func linearSearchFind(slise []int, elem int) int {
+	for i, v := range slise {
+		if elem == v {
+			return i
+		}
+	}
+	return -1
+}
+
 func StartTask() {
 	// task_26()
 	// task_122()
 	// task_189()
 	// task_217()
-	task_136()
+	// task_136()
+	// task_350()
+	task_66()
 }
