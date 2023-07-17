@@ -19,7 +19,7 @@ func intersect(nums1 []int, nums2 []int) []int {
 	for _, key := range nums1 {
 		unsigned_map[key]++
 	}
-	var intersection []int
+	intersection := make([]int, len(nums2)/4)
 
 	for _, key := range nums2 {
 		if unsigned_map[key] > 0 {
