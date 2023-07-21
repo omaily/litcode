@@ -1,11 +1,11 @@
 package main
 
 import (
-	// array "litcode/array"
-	stringi "litcode/stringi"
+	"litcode/array"
+	"litcode/stringi"
 )
 
 func main() {
-	// array.StartTask()
+	array.StartTask()
 	stringi.StartTask()
 }
