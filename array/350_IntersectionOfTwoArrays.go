@@ -11,7 +11,7 @@ func task_350() {
 }
 
 func intersect(nums1 []int, nums2 []int) []int {
-	if len(nums1) < len(nums2) {
+	if len(nums1) > len(nums2) {
 		return intersect(nums2, nums1)
 	}
 

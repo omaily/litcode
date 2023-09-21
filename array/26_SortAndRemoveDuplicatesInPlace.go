@@ -3,40 +3,41 @@ package array
 func task_26() {
 	var size int = 100
 	nums := generateRandomSlise(size)
-	removeDuplicates(nums)
+	removeDuplicates2(nums)
 	printSlise(nums)
 }
 
-func removeDuplicates(nums []int) int {
-	garbageCursor := len(nums) - 1
-	for i, v := range nums {
-		if i >= garbageCursor {
-			break
-		}
-
-		//making sort
-		var iterator int = i
-		for iterator > 0 && nums[iterator] < nums[iterator-1] {
-			nums[iterator], nums[iterator-1] = nums[iterator-1], nums[iterator]
-			iterator--
-		}
-
-		// making Garbage
-		for j := i + 1; j < garbageCursor; j++ {
-			// если в garbageCursor элемент равный повторяющемуся
-			for nums[garbageCursor] == v {
-				garbageCursor--
-			}
-			if j >= garbageCursor {
+func removeDuplicates1(nums []int) {
+	printSlise(nums)
+	var rep int
+	for i := 0; i < len(nums); i++ {
+		var repet bool
+		for j := 0; j < rep; j++ {
+			if nums[i] == nums[j] {
+				repet = true
 				break
 			}
-			// убираем повторяющиеся элементы
-			if nums[j] == v {
-				nums[j], nums[garbageCursor] = nums[garbageCursor], nums[j]
-				garbageCursor--
-			}
 		}
+		if repet {
+			continue
+		}
+		nums[i], nums[rep] = nums[rep], nums[i]
+		rep++
 	}
 
-	return garbageCursor
+	printSlise(nums)
+}
+
+func removeDuplicates2(nums []int) {
+	printSlise(nums)
+	hash := make(map[int]struct{}, len(nums))
+	var iterator int
+	for i, v := range nums {
+		if _, ok := hash[v]; !ok {
+			nums[iterator], nums[i] = nums[i], nums[iterator]
+			iterator++
+		}
+		hash[v] = struct{}{}
+	}
+	printSlise(nums)
 }

@@ -8,7 +8,6 @@ import (
 
 func generateRandomSlise(size int) []int {
 	slise := make([]int, size)
-	// rand.Seed(time.Now().UnixNano())
 	fmt.Print()
 	for i := range slise {
 		slise[i] = rand.Intn(10)

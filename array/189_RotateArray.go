@@ -26,8 +26,6 @@ func rotate(nums []int, k int) {
 // решение задачи на месте
 func rotateInPlase(nums []int, k int) {
 	length := len(nums)
-	numsCopy := make([]int, length)
-	copy(numsCopy, nums)
 
 	for i := 0; i < k; i++ {
 		lastValue := nums[length-1]
