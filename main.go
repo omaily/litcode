@@ -1,8 +1,7 @@
 package main
 
 import (
-	// s "litcode/sort"
-	m "litcode/matrix"
+	"litcode/ozon"
 )
 
 func init() {
@@ -14,5 +13,6 @@ func main() {
 	// stringi.StartTask()
 	// s.Sort()
 	// list.StartTask()
-	m.StartTask()
+	// m.StartTask()
+	ozon.Task_1()
 }
