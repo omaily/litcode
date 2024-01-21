@@ -14,5 +14,5 @@ func main() {
 	// s.Sort()
 	// list.StartTask()
 	// m.StartTask()
-	ozon.Task_1()
+	ozon.Task_3()
 }
