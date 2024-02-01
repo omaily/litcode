@@ -1,8 +1,6 @@
 package main
 
-import (
-	"litcode/ozon"
-)
+import "litcode/list"
 
 func init() {
 	// os.Setenv("GODEBUG", "randautoseed=0")
@@ -12,7 +10,5 @@ func main() {
 	// array.StartTask()
 	// stringi.StartTask()
 	// s.Sort()
-	// list.StartTask()
-	// m.StartTask()
-	ozon.Task_3()
+	list.StartTask()
 }
